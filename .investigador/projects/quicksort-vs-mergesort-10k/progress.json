@@ -3,7 +3,7 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "81a5673500ad638f266d005f851052f3e0ae807e548930c44518ca8c4cecd8ce",
+  "local_digest": "42dc284616e5617cf61c4b43c87fc1ffc6484b321802d47dd1cbf2b8a02713c6",
   "completed": [
     "intake",
     "search_plan",
@@ -395,6 +395,78 @@
           "memory": "sufficient for 10000 integers"
         },
         "status": "ok"
+      }
+    },
+    {
+      "id": "experiment_design-cb0aa132-9b13-4451-ae27-9c95eae18809",
+      "time": "2026-11-13T22:25:23.594Z",
+      "output": {
+        "status": "ok",
+        "phase": "experiment_design",
+        "hypothesis_id": "hypothesis-e7ee057ce456aeac8d1eeaf4cb812656",
+        "protocol_draft": {
+          "description": "Protocolo experimental para comparar QuickSort y MergeSort ordenando 10.000 enteros en Node.js 24. Se generan arrays idénticos mediante una semilla fija con Math.random determinista (linear congruential generator o seedrandom sintético). Se ejecutan 50 repeticiones para cada algoritmo midiendo el tiempo con process.hrtime.bigint() y el uso de memoria con process.memoryUsage().",
+          "inputs": "Array sintético de 10.000 enteros generados con semillas fijas (casos: aleatorio, semi-ordenado, orden inverso)."
+        },
+        "baselines": [
+          {
+            "algorithm": "MergeSort",
+            "description": "Implementación estándar recursiva o iterativa de MergeSort en Node.js utilizando arreglos auxiliares."
+          }
+        ],
+        "metrics_and_criteria": [
+          {
+            "metric_name": "execution_time_ms",
+            "direction": "minimize",
+            "target_threshold": "QuickSort debe mostrar un tiempo medio menor que MergeSort debido a su menor sobrecarga de asignación de memoria auxiliar."
+          },
+          {
+            "metric_name": "heap_memory_allocated_bytes",
+            "direction": "minimize",
+            "target_threshold": "MergeSort muestra mayor asignación de memoria debido a la creación de subarrays auxiliares."
+          }
+        ],
+        "controls": [
+          {
+            "control_type": "Identical datasets",
+            "description": "Uso exacto de los mismos 50 arreglos con semilla fija para ambas pruebas."
+          },
+          {
+            "control_type": "Warm-up iterations",
+            "description": "Ejecución previa de calentamiento (warm-up) para estabilizar el motor JIT de V8 (Node.js 24)."
+          }
+        ],
+        "reproducibility_requirements": [
+          "Uso de Node.js 24",
+          "Semillas aleatorias fijas para generación de datos",
+          "Ejecución en entorno controlado sin procesos concurrentes pesados"
+        ],
+        "resources": {
+          "compute": "CPU estándar del entorno local",
+          "memory": "Suficiente para arreglos de 10.000 enteros",
+          "language": "Node.js 24"
+        },
+        "failure_conditions": [
+          "Desbordamiento de pila (stack overflow) en QuickSort ante particionamiento desbalanceado no controlado",
+          "Variabilidad excesiva en las mediciones por interferencia del recolector de basura (GC)"
+        ],
+        "claims": [
+          {
+            "text": "El diseño experimental permite evaluar el rendimiento y uso de memoria de QuickSort frente a MergeSort para N=10.000 en Node.js de forma reproducible.",
+            "support_ids": [
+              "src-eb4a8917e7da5157"
+            ],
+            "certainty": "inference"
+          }
+        ],
+        "artifacts_to_record": [],
+        "proposed_next_actions": [
+          {
+            "action": "experiment_plan",
+            "description": "Registrar plan experimental con manifiesto público para ejecución."
+          }
+        ],
+        "blockers": []
       }
     }
   ],
