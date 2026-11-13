@@ -3,9 +3,10 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "6beb1de0f8c63f6035cb065d57c1af286f0ca59a3c110a3f6942bfcda734a357",
+  "local_digest": "145f3295bf291fd05c2aa9cc0a48554d8fbfd859116f343c71714a9dd19059be",
   "completed": [
-    "intake"
+    "intake",
+    "search_plan"
   ],
   "source_repositories": [],
   "sources": [],
@@ -56,6 +57,56 @@
         ],
         "status": "ok",
         "user_questions": []
+      }
+    },
+    {
+      "id": "search_plan",
+      "time": "2026-11-13T11:06:18.949Z",
+      "output": {
+        "artifacts_to_record": [],
+        "blockers": [],
+        "claims": [
+          {
+            "certainty": "inference",
+            "support_ids": [],
+            "text": "Se planifica la búsqueda bibliográfica y teórica sobre el rendimiento de QuickSort y MergeSort para N=10000."
+          }
+        ],
+        "coverage_targets": [
+          "Time complexity analysis (average, best, worst cases)",
+          "Space/memory complexity analysis (in-place vs auxiliary storage)",
+          "Cache behavior and constant overhead for arrays of size 10,000"
+        ],
+        "known_gaps": [
+          "Exact hardware-dependent benchmark numbers depend on CPU architecture, cache size, and compiler optimizations, which will be addressed theoretically and through standard algorithmic principles."
+        ],
+        "phase": "search_plan",
+        "planned_queries": [
+          {
+            "purpose": "Compare theoretical and practical performance characteristics of QuickSort and MergeSort for medium input sizes.",
+            "query": "Quicksort vs Mergesort performance 10000 integers complexity cache locality",
+            "source_family": "academic literature and algorithm benchmarks"
+          }
+        ],
+        "proposed_next_actions": [
+          {
+            "action": "bibliography",
+            "description": "Ejecutar búsqueda bibliográfica sobre QuickSort y MergeSort"
+          }
+        ],
+        "research_questions": [
+          "What is the theoretical time and space complexity of QuickSort vs MergeSort?",
+          "How do cache locality, memory allocation, and constant factors affect QuickSort and MergeSort performance for N = 10,000 integers?",
+          "Under what conditions is QuickSort preferred over MergeSort and vice versa in practical applications?"
+        ],
+        "source_families": [
+          "Computer science algorithms textbooks",
+          "Sorting algorithm performance benchmarks and empirical analyses"
+        ],
+        "status": "ok",
+        "stop_review_proposal": {
+          "condition": "When theoretical analysis and comparative literature sufficiently explain the performance trade-offs for N = 10,000 integers."
+        }
       }
     }
   ],
