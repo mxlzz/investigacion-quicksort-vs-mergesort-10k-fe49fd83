@@ -3,7 +3,7 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "fd392af686ddf442da5d9019f45fe49fd56d3d7012888858b639f305ee6cc7dd",
+  "local_digest": "52ce079af8bc26303f99ac23f28280e5dfdf58bc8850bde4fa512e910c3f0351",
   "completed": [
     "intake",
     "search_plan",
@@ -11,7 +11,9 @@
     "map_knowledge",
     "hypotheses",
     "novelty_review",
-    "experiment_design"
+    "experiment_design",
+    "evaluation",
+    "report"
   ],
   "source_repositories": [
     {
@@ -467,6 +469,143 @@
           }
         ],
         "blockers": []
+      }
+    },
+    {
+      "id": "evaluation-79ddffd9-4713-4000-9541-0c00e4b4e970",
+      "time": "2026-11-13T22:32:48.475Z",
+      "output": {
+        "phase": "evaluation",
+        "status": "ok",
+        "experiment_id": "experiment-result-5b3fd9d0afdfa885a74047bb",
+        "interpretability_checks": [
+          {
+            "check": "commit and environment compatibility",
+            "status": "passed",
+            "details": "Ejecución remota en GitHub Actions con Node.js 24 utilizando commit source_commit a16996100a4af642a9de1fcd284a135f19631d9d."
+          },
+          {
+            "check": "dataset and determinism verification",
+            "status": "passed",
+            "details": "Uso de LCG determinista con semilla fija 42 y 50 repeticiones idénticas para ambos algoritmos."
+          }
+        ],
+        "baseline_comparisons": [
+          {
+            "metric": "execution_time_ms",
+            "baseline_value": 3.9659,
+            "candidate_value": 0.6993,
+            "improvement": 3.2666,
+            "description": "QuickSort (candidato) registró un tiempo medio de ejecución de 0.6993 ms frente a 3.9659 ms de MergeSort (baseline) para N=10,000 enteros."
+          },
+          {
+            "metric": "heap_memory_allocated_bytes",
+            "baseline_value": 253088,
+            "candidate_value": 36576,
+            "improvement": 216512,
+            "description": "QuickSort consumió 36.57 KB de heap auxiliar frente a 253.08 KB de MergeSort debido a las asignaciones de sub-arrays."
+          }
+        ],
+        "primary_findings": [
+          {
+            "finding": "Superioridad temporal empírica de QuickSort frente a MergeSort para N=10,000 en Node.js 24 bajo las condiciones probadas."
+          },
+          {
+            "finding": "Menor huella de memoria en heap para QuickSort in-place frente a la creación recursiva de arrays auxiliares en MergeSort."
+          }
+        ],
+        "limitations": [
+          "Infraestructura y evaluación numérica básica en GitHub Actions; no verifica equivalencia estadística formal mediante múltiples corridas independientes de entorno ni pruebas de normalidad.",
+          "La superioridad observada se limita a un entorno de ejecución específico (Node.js 24 en GitHub Actions) con datos aleatorios generados por LCG, sin generalizar a todas las arquitecturas de hardware, compiladores JIT o distribuciones de datos (por ejemplo, worst-case de QuickSort con pivote mal seleccionado).",
+          "Posible influencia marginal de la recolección de basura (GC) de V8 en las mediciones de milisegundos."
+        ],
+        "verdict": "supported",
+        "recommendation": "Promover la adopción de QuickSort para conjuntos de datos en memoria de tamaño moderado (N=10,000) bajo condiciones similares, manteniendo conciencia sobre el riesgo de peor caso si se usa selección de pivote ingenua.",
+        "claims": [
+          {
+            "text": "QuickSort demostró un tiempo medio de ejecución menor (0.6993 ms) que MergeSort (3.9659 ms) para N=10,000 enteros en las pruebas ejecutadas.",
+            "support_ids": [
+              "experiment-result-5b3fd9d0afdfa885a74047bb"
+            ],
+            "certainty": "observed"
+          },
+          {
+            "text": "QuickSort asigna menos memoria en el heap (36,576 bytes) en comparación con MergeSort (253,088 bytes) debido a su naturaleza in-place.",
+            "support_ids": [
+              "experiment-result-5b3fd9d0afdfa885a74047bb"
+            ],
+            "certainty": "observed"
+          }
+        ],
+        "artifacts_to_record": [],
+        "proposed_next_actions": [
+          {
+            "action": "report",
+            "description": "Generar el reporte final de la investigación comparativa integrando la evidencia teórica y los resultados experimentales."
+          }
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "id": "report-c2496f66-1d9a-4ea1-b25e-7f31b54778ad",
+      "time": "2026-11-13T22:32:58.523Z",
+      "output": {
+        "status": "ok",
+        "phase": "report",
+        "claims": [
+          {
+            "text": "QuickSort demostró un tiempo medio de ejecución menor (0.6993 ms) que MergeSort (3.9659 ms) para N=10,000 enteros en las pruebas ejecutadas en GitHub Actions.",
+            "support_ids": [
+              "experiment-result-5b3fd9d0afdfa885a74047bb"
+            ],
+            "certainty": "observed"
+          },
+          {
+            "text": "QuickSort asigna menos memoria en el heap (36,576 bytes) en comparación con MergeSort (253,088 bytes) debido a su naturaleza in-place.",
+            "support_ids": [
+              "experiment-result-5b3fd9d0afdfa885a74047bb"
+            ],
+            "certainty": "observed"
+          }
+        ],
+        "artifacts_to_record": [],
+        "proposed_next_actions": [],
+        "blockers": [],
+        "notes": null,
+        "summary": "Se completó la investigación comparativa entre QuickSort y MergeSort para N=10.000 enteros. Se realizó búsqueda bibliográfica en Crossref, formulación de hipótesis, diseño experimental y ejecución remota verificada en GitHub Actions (Node.js 24). Los resultados experimentales confirmaron que QuickSort supera a MergeSort tanto en tiempo de ejecución (0.6993 ms vs 3.9659 ms) como en asignación de memoria en el heap (36.57 KB vs 253.08 KB) bajo las condiciones probadas.",
+        "verified_changes": [
+          {
+            "change": "Creación y sincronización del repositorio público mxlzz/investigacion-quicksort-vs-mergesort-10k-fe49fd83"
+          },
+          {
+            "change": "Ejecución exitosa del experimento en GitHub Actions (run_id 43519292261) con recibo verificado"
+          }
+        ],
+        "findings": [
+          {
+            "finding": "QuickSort exhibe un tiempo medio de ejecución 5.6 veces menor que MergeSort para N=10.000 en el entorno evaluado."
+          },
+          {
+            "finding": "La huella de memoria auxiliar de QuickSort es sustancialmente menor debido a su particionamiento in-place frente a la creación recursiva de sub-arrays en MergeSort."
+          }
+        ],
+        "negative_results": [
+          {
+            "result": "No se evaluaron distribuciones de peor caso (como arrays ya ordenados con pivote fijo en QuickSort), por lo que se mantiene la advertencia teórica sobre degradación O(n^2)."
+          }
+        ],
+        "future_opportunities": [
+          {
+            "opportunity": "Explorar adaptaciones hibrícas (IntroSort) que combinen QuickSort con InsertionSort para datasets pequeños o Heapsort para evitar el peor caso."
+          }
+        ],
+        "uncertainties": [
+          "Influencia marginal del recolector de basura (GC) de V8 en las mediciones de milisegundos.",
+          "Falta de generalización estadística formal mediante múltiples corridas independientes en diversas arquitecturas de hardware."
+        ],
+        "decision_requests": [],
+        "next_step": null
       }
     }
   ],
