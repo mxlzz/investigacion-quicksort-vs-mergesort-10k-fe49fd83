@@ -6,6 +6,6 @@ Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 núme
 
 Investigación en curso; no se afirma un resultado todavía.
 
-Fases confirmadas: intake, search_plan, extract_evidence, map_knowledge, hypotheses, novelty_review.
+Fases confirmadas: intake, search_plan, extract_evidence, map_knowledge, hypotheses, novelty_review, experiment_design.
 
 El archivo progress.json contiene resultados y referencias. Los textos completos de las fuentes y las credenciales no se exportan.

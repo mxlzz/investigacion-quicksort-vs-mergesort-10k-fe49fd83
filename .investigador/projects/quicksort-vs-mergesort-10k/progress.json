@@ -3,14 +3,15 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "11fb3f0d2ece1968d968ff1bf9256bef36a33747cde7bb0c194d6d813a778aa1",
+  "local_digest": "1712f9462e70cbd55800b3aae63f3bd2e556f91ccd5d3a91ea73b41ac8eb8fe5",
   "completed": [
     "intake",
     "search_plan",
     "extract_evidence",
     "map_knowledge",
     "hypotheses",
-    "novelty_review"
+    "novelty_review",
+    "experiment_design"
   ],
   "source_repositories": [],
   "sources": [
@@ -320,6 +321,62 @@
           }
         ],
         "blockers": []
+      }
+    },
+    {
+      "id": "experiment_design-7081c872-83bc-44f7-baec-53a54f6b0888",
+      "time": "2026-11-13T15:40:10.480Z",
+      "output": {
+        "artifacts_to_record": [],
+        "baselines": [
+          {
+            "algorithm": "MergeSort",
+            "description": "Standard implementation of MergeSort for 10,000 integers"
+          }
+        ],
+        "blockers": [],
+        "claims": [
+          {
+            "certainty": "inference",
+            "support_ids": [],
+            "text": "QuickSort and MergeSort can be compared theoretically and empirically for N=10000 integers."
+          }
+        ],
+        "controls": [
+          {
+            "control_type": "randomized input arrays",
+            "description": "Use identical randomized integer arrays for both sorting algorithms to ensure fair comparison."
+          }
+        ],
+        "failure_conditions": [
+          "Stack overflow in QuickSort worst-case partition or excessive auxiliary memory in MergeSort."
+        ],
+        "hypothesis_id": "hyp-sorting-10k",
+        "metrics_and_criteria": [
+          {
+            "direction": "minimize",
+            "metric_name": "execution_time_seconds",
+            "target_threshold": "empirical comparison under 1 second"
+          }
+        ],
+        "phase": "experiment_design",
+        "proposed_next_actions": [
+          {
+            "action": "experiment_plan",
+            "description": "Registrar plan experimental con manifiesto público."
+          }
+        ],
+        "protocol_draft": {
+          "description": "Protocol for benchmarking QuickSort vs MergeSort with N=10,000 integers in Python."
+        },
+        "reproducibility_requirements": [
+          "fixed random seed and identical test datasets"
+        ],
+        "resources": {
+          "compute": "standard CPU",
+          "memory": "sufficient for 10000 integers"
+        },
+        "status": "ok"
       }
     }
   ],
