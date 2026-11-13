@@ -3,7 +3,7 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "bb3a06f5791015af67d6f8b653a7735ab5c58d4e7c0dbbd61d21718e9ddd9614",
+  "local_digest": "81a5673500ad638f266d005f851052f3e0ae807e548930c44518ca8c4cecd8ce",
   "completed": [
     "intake",
     "search_plan",
@@ -59,6 +59,19 @@
       "access_level": "abstract",
       "retrieved_at": "2026-11-13T11:06:28.593Z",
       "github": null
+    },
+    {
+      "id": "github-source-a7619d8428d8318d91d031af1635da12fa0ff942",
+      "url": "https://github.com/mxlzz/investigacion-quicksort-vs-mergesort-10k-fe49fd83/blob/867738e1a2c23309e0f887d9257b1ba87a884528/README.md",
+      "title": "mxlzz/investigacion-quicksort-vs-mergesort-10k-fe49fd83: README.md",
+      "access_level": "full_text",
+      "retrieved_at": "2026-11-13T17:03:36.039Z",
+      "github": {
+        "repository": "mxlzz/investigacion-quicksort-vs-mergesort-10k-fe49fd83",
+        "commit": "867738e1a2c23309e0f887d9257b1ba87a884528",
+        "path": "README.md",
+        "private": false
+      }
     }
   ],
   "hypotheses": [
