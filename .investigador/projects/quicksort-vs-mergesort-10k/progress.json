@@ -3,11 +3,12 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "301cd17a178c74347df07d0d2ca71e688b5331043165b70d0c7fc6ac7aa0c4cb",
+  "local_digest": "6c420b077e9bebc09812b874bd70a878fc02da6870c919ab8c5ebc07679fe1e5",
   "completed": [
     "intake",
     "search_plan",
-    "extract_evidence"
+    "extract_evidence",
+    "map_knowledge"
   ],
   "source_repositories": [],
   "sources": [
@@ -186,6 +187,50 @@
         "source_identifier": "src-eb4a8917e7da5157",
         "status": "ok",
         "unverified_fields": []
+      }
+    },
+    {
+      "id": "map_knowledge-35c106ae-35e8-4bfc-9dce-5d9b899f2d6b",
+      "time": "2026-11-13T11:55:15.101Z",
+      "output": {
+        "artifacts_to_record": [],
+        "blockers": [],
+        "claims": [
+          {
+            "certainty": "inference",
+            "support_ids": [
+              "src-eb4a8917e7da5157"
+            ],
+            "text": "El mapeo de conocimiento identifica que QuickSort destaca por localidad de caché y rendimiento empírico superior a escala para N=10000, mientras que MergeSort ofrece estabilidad garantizada O(n log n) con mayor uso de memoria auxiliar."
+          }
+        ],
+        "contradictions": [],
+        "coverage_gaps": [],
+        "method_families": [
+          {
+            "description": "Análisis teórico y revisión bibliográfica",
+            "family": "literature_analysis"
+          }
+        ],
+        "open_questions": [
+          {
+            "question": "¿Cómo impacta la selección de pivote en QuickSort para 10.000 enteros aleatorios vs semi-ordenados?"
+          }
+        ],
+        "phase": "map_knowledge",
+        "proposed_edges": [],
+        "proposed_next_actions": [
+          {
+            "action": "hypotheses",
+            "description": "Formular hipótesis sobre el rendimiento comparativo para 10.000 enteros"
+          }
+        ],
+        "status": "ok",
+        "supported_findings": [
+          {
+            "finding": "QuickSort es frecuentemente más rápido en la práctica debido a su localidad de caché, aunque MergeSort garantiza peor caso O(n log n)."
+          }
+        ]
       }
     }
   ],
