@@ -3,7 +3,7 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "42dc284616e5617cf61c4b43c87fc1ffc6484b321802d47dd1cbf2b8a02713c6",
+  "local_digest": "12ce9bf24d8c628eebaa5bfc8ea9dbe9c1a280e83ea0c77220625f2fd6d3a9c5",
   "completed": [
     "intake",
     "search_plan",
