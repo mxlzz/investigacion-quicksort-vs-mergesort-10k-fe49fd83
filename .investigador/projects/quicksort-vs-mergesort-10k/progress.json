@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "project": "quicksort-vs-mergesort-10k",
+  "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
+  "visibility": "public",
+  "local_digest": "23231a011dc5a7b79a4e4cb07c3b2e9b8e9a829d6be179acde2524195998bf3d",
+  "completed": [],
+  "source_repositories": [],
+  "sources": [],
+  "hypotheses": [],
+  "phases": [],
+  "experiments": []
+}
