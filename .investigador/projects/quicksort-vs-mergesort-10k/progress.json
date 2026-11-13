@@ -3,13 +3,54 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "145f3295bf291fd05c2aa9cc0a48554d8fbfd859116f343c71714a9dd19059be",
+  "local_digest": "b06ef9436be6e8411ae93dc28df95c5772e0aa90c99b3ecf6dec24ef5f34e857",
   "completed": [
     "intake",
     "search_plan"
   ],
   "source_repositories": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "src-eb4a8917e7da5157",
+      "url": "https://doi.org/10.31224/4537",
+      "title": "Hybridization and Optimization Modeling, Analysis, and Comparative Study of Sorting Algorithms: Adaptive Techniques, Parallelization, for Mergesort, Heapsort, Quicksort, Insertion Sort, Selection Sort, and Bubble Sort",
+      "access_level": "abstract",
+      "retrieved_at": "2026-11-13T11:06:28.593Z",
+      "github": null
+    },
+    {
+      "id": "src-aba57929ebe9669c",
+      "url": "https://doi.org/10.1145/3708597.3708616",
+      "title": "Threshold Optimization and Hashing vs Radix vs QuickSort] Threshold Optimization and Comparative Performance Evaluation of Quicksort Algorithms: Hashing vs Radix vs QuickSort",
+      "access_level": "metadata",
+      "retrieved_at": "2026-11-13T11:06:28.593Z",
+      "github": null
+    },
+    {
+      "id": "src-1286ee60b21fa956",
+      "url": "https://doi.org/10.1016/0164-1212(89)90031-9",
+      "title": "Performance comparison of distributive and mergesort as external sorting algorithms",
+      "access_level": "metadata",
+      "retrieved_at": "2026-11-13T11:06:28.593Z",
+      "github": null
+    },
+    {
+      "id": "src-482a67cb609efa9c",
+      "url": "https://doi.org/10.1016/j.procs.2020.04.274",
+      "title": "COMPARATIVE STUDY OF TWO DIVIDE AND CONQUER SORTING ALGORITHMS: QUICKSORT AND MERGESORT",
+      "access_level": "metadata",
+      "retrieved_at": "2026-11-13T11:06:28.593Z",
+      "github": null
+    },
+    {
+      "id": "src-40ecf0f9d32fe1d2",
+      "url": "https://doi.org/10.28989/compiler.v9i1.633",
+      "title": "COMPARISON OF QUICKSORT AND MERGESORT METHOD FOR USER INTERFACE AND USER EXPERIENCE ASSESSMENT IN ADISUTJIPTO COLLEGE OF TECHNOLOGY",
+      "access_level": "abstract",
+      "retrieved_at": "2026-11-13T11:06:28.593Z",
+      "github": null
+    }
+  ],
   "hypotheses": [],
   "phases": [
     {
