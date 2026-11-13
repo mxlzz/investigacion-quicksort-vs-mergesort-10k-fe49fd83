@@ -3,12 +3,13 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "6c420b077e9bebc09812b874bd70a878fc02da6870c919ab8c5ebc07679fe1e5",
+  "local_digest": "5056aab1cb9c3e36cfa85dec120a1ddad55ca286ef6baae755672f6c99b580ad",
   "completed": [
     "intake",
     "search_plan",
     "extract_evidence",
-    "map_knowledge"
+    "map_knowledge",
+    "hypotheses"
   ],
   "source_repositories": [],
   "sources": [
@@ -231,6 +232,40 @@
             "finding": "QuickSort es frecuentemente más rápido en la práctica debido a su localidad de caché, aunque MergeSort garantiza peor caso O(n log n)."
           }
         ]
+      }
+    },
+    {
+      "id": "hypotheses-824df592-b0d1-4764-af26-5c6a84513af7",
+      "time": "2026-11-13T12:39:17.052Z",
+      "output": {
+        "artifacts_to_record": [],
+        "blockers": [],
+        "candidates": [
+          {
+            "id": "hyp-1",
+            "rationale": "QuickSort realiza particionamiento in-place con menor sobrecarga de memoria que MergeSort.",
+            "statement": "QuickSort exhibe menor tiempo de ejecución promedio que MergeSort para ordenar N=10,000 números enteros en memoria debido a su mejor localidad de caché y menor sobrecarga por asignación de memoria auxiliar."
+          }
+        ],
+        "claims": [
+          {
+            "certainty": "inference",
+            "support_ids": [
+              "src-eb4a8917e7da5157"
+            ],
+            "text": "La literatura indica que QuickSort domina en eficiencia empírica a escala moderada/grande."
+          }
+        ],
+        "future_opportunities": [],
+        "phase": "hypotheses",
+        "proposed_next_actions": [
+          {
+            "action": "novelty_review",
+            "description": "Revisar la novedad y antecedentes de las hipótesis formuladas."
+          }
+        ],
+        "reasons_not_to_test_yet": [],
+        "status": "ok"
       }
     }
   ],
