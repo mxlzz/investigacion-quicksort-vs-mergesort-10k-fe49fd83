@@ -3,10 +3,11 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "b06ef9436be6e8411ae93dc28df95c5772e0aa90c99b3ecf6dec24ef5f34e857",
+  "local_digest": "301cd17a178c74347df07d0d2ca71e688b5331043165b70d0c7fc6ac7aa0c4cb",
   "completed": [
     "intake",
-    "search_plan"
+    "search_plan",
+    "extract_evidence"
   ],
   "source_repositories": [],
   "sources": [
@@ -148,6 +149,43 @@
         "stop_review_proposal": {
           "condition": "When theoretical analysis and comparative literature sufficiently explain the performance trade-offs for N = 10,000 integers."
         }
+      }
+    },
+    {
+      "id": "extract_evidence-50d3c181-2b1e-4816-83ba-58afaf8174c6",
+      "time": "2026-11-13T11:41:02.813Z",
+      "output": {
+        "access_level": "abstract",
+        "artifacts_to_record": [],
+        "bibliographic_metadata": {
+          "doi": "10.31224/4537",
+          "title": "Hybridization and Optimization Modeling, Analysis, and Comparative Study of Sorting Algorithms"
+        },
+        "blockers": [],
+        "candidate_relations": [],
+        "claims": [
+          {
+            "certainty": "inference",
+            "support_ids": [
+              "src-eb4a8917e7da5157"
+            ],
+            "text": "El estudio de Crossref (src-eb4a8917e7da5157) señala que Quicksort domina a escala con alta eficiencia empírica."
+          }
+        ],
+        "phase": "extract_evidence",
+        "proposed_next_actions": [
+          {
+            "action": "map_knowledge",
+            "description": "Mapear conocimiento y antecedentes bibliográficos."
+          }
+        ],
+        "reported_experiments": [],
+        "reported_limitations": [
+          "Metadatos de editor; no se descargó el texto completo."
+        ],
+        "source_identifier": "src-eb4a8917e7da5157",
+        "status": "ok",
+        "unverified_fields": []
       }
     }
   ],
