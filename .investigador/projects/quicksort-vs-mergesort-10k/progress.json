@@ -3,13 +3,14 @@
   "project": "quicksort-vs-mergesort-10k",
   "request": "Investigación comparativa entre QuickSort y MergeSort para ordenar 10.000 números enteros, ventajas, limitaciones y condiciones de preferencia.",
   "visibility": "public",
-  "local_digest": "5056aab1cb9c3e36cfa85dec120a1ddad55ca286ef6baae755672f6c99b580ad",
+  "local_digest": "11fb3f0d2ece1968d968ff1bf9256bef36a33747cde7bb0c194d6d813a778aa1",
   "completed": [
     "intake",
     "search_plan",
     "extract_evidence",
     "map_knowledge",
-    "hypotheses"
+    "hypotheses",
+    "novelty_review"
   ],
   "source_repositories": [],
   "sources": [
@@ -54,7 +55,17 @@
       "github": null
     }
   ],
-  "hypotheses": [],
+  "hypotheses": [
+    {
+      "id": "hypothesis-e7ee057ce456aeac8d1eeaf4cb812656",
+      "text": "QuickSort exhibe menor tiempo de ejecución promedio que MergeSort para ordenar N=10,000 números enteros en memoria debido a su mejor localidad de caché y menor sobrecarga por asignación de memoria auxiliar.",
+      "support_ids": [],
+      "origin": {
+        "phase_event": "hypotheses-824df592-b0d1-4764-af26-5c6a84513af7",
+        "candidate_id": "hyp-1"
+      }
+    }
+  ],
   "phases": [
     {
       "id": "intake",
@@ -266,6 +277,49 @@
         ],
         "reasons_not_to_test_yet": [],
         "status": "ok"
+      }
+    },
+    {
+      "id": "novelty_review-d8a5b84c-f978-43ac-b180-3c782fba89c3",
+      "time": "2026-11-13T15:32:19.176Z",
+      "output": {
+        "phase": "novelty_review",
+        "status": "ok",
+        "hypothesis_id": "hypothesis-e7ee057ce456aeac8d1eeaf4cb812656",
+        "prior_art_classification": "documented",
+        "equivalent_or_related_work": [
+          {
+            "source_id": "src-eb4a8917e7da5157",
+            "title": "Hybridization and Optimization Modeling, Analysis, and Comparative Study of Sorting Algorithms",
+            "relation": "documenta el rendimiento empírico superior de Quicksort frente a otros algoritmos O(n log n) y evalúa su eficiencia práctica."
+          }
+        ],
+        "searches_reviewed": [
+          {
+            "search_id": "search-a5bec68d5dc4c3f8",
+            "query": "Quicksort vs Mergesort performance comparison sorting algorithms"
+          }
+        ],
+        "missing_searches": [],
+        "expected_new_information": "Validación teórica del rendimiento relativo y de la localidad de caché entre QuickSort y MergeSort para N=10,000.",
+        "recommendation": "differentiate",
+        "claims": [
+          {
+            "text": "La literatura previa documenta que QuickSort presenta ventajas empíricas debido a su localidad de caché y menor overhead de memoria auxiliar frente a MergeSort.",
+            "support_ids": [
+              "src-eb4a8917e7da5157"
+            ],
+            "certainty": "source_claim"
+          }
+        ],
+        "artifacts_to_record": [],
+        "proposed_next_actions": [
+          {
+            "action": "experiment_design",
+            "description": "Diseñar experimentación o análisis detallado para evaluar la hipótesis en el entorno controlado permitido."
+          }
+        ],
+        "blockers": []
       }
     }
   ],
